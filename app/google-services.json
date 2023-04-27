@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788750005985",
+    "project_id": "navkardreamsoft-bfe05",
+    "storage_bucket": "navkardreamsoft-bfe05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788750005985:android:c3be03151de685caf929a0",
+        "android_client_info": {
+          "package_name": "com.example.navkardreamsoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788750005985-hd423r3t3hfgfta7iunobh7fivfat1qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQJZ3QbPiUVJg5oKh0mwX0NikUACWhtw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788750005985-hd423r3t3hfgfta7iunobh7fivfat1qb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

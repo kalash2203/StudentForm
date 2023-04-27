@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_name"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Name"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/field_name"
+            app:layout_constraintTop_toBottomOf="@+id/field_name" />
+
+
+        <RadioGroup
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_gender"
+            app:layout_constraintStart_toEndOf="@+id/txt_gender"
+            app:layout_constraintTop_toTopOf="@+id/txt_gender">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_email"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Email"
+            app:layout_constraintTop_toBottomOf="@id/field_birth_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_birth_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date Of Birth"
+            android:layout_marginTop="20dp"
+            app:endIconDrawable="@drawable/calendar_icon"
+            app:endIconMode="custom"
+            app:layout_constraintTop_toBottomOf="@id/txt_gender"
+            style="@style/MaterialThemeOutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_birth_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/field_birth_date"
+            app:layout_constraintBottom_toBottomOf="@id/field_birth_date"
+            app:layout_constraintStart_toStartOf="@id/field_birth_date"
+            app:layout_constraintEnd_toEndOf="@id/field_birth_date"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_college_fees"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="College Fees"
+            app:layout_constraintTop_toBottomOf="@id/field_registration_fees">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_college_fees"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_registration_fees"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Registration Fees"
+            app:layout_constraintTop_toBottomOf="@id/field_passing_year">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_registration_fees"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_exam_fees"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Exam Fees"
+            app:layout_constraintTop_toBottomOf="@id/field_college_fees">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_exam_fees"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_total_fees"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Total Fees"
+            app:layout_constraintTop_toBottomOf="@id/field_exam_fees">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_total_fees"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:enabled="false"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_address"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Address"
+            app:layout_constraintTop_toBottomOf="@id/field_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_mobile_no"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Mobile Number"
+            app:layout_constraintTop_toBottomOf="@id/field_address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_mobile_no"
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_passing_year"
+            style="@style/MaterialThemeOutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:hint="Passing Year"
+            app:layout_constraintTop_toBottomOf="@id/field_mobile_no">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_passing_year"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/field_total_fees" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Record"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_save" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
